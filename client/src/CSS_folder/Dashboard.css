@@ -1,0 +1,806 @@
+/* Dashboard.css */
+
+
+/* ================================
+   MAIN WRAPPER
+================================ */
+
+.dashboard_wrapper {
+  width: 100%;
+  min-height: calc(100vh - 72px);
+
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.08), transparent 30%),
+    #f8fafc;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 70px 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   DASHBOARD CONTENT
+================================ */
+
+.dashboard_content {
+  width: 100%;
+  max-width: 1250px;
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+/* ================================
+   LEFT SIDE
+================================ */
+
+.dashboard_left_message_wrapper {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+
+.dashboard_message {
+  max-width: 690px;
+}
+
+
+/* ================================
+   SECURITY BADGE
+================================ */
+
+.dashboard_security_message {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 12px;
+
+  background: #ecfdf5;
+
+  border: 1px solid #bbf7d0;
+
+  color: #15803d;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  border-radius: 50px;
+
+  margin-bottom: 20px;
+}
+
+
+.dashboard_security_message svg {
+  width: 15px;
+  height: 15px;
+}
+
+
+/* ================================
+   MAIN TITLE
+================================ */
+
+.dashboard_title {
+  margin: 0;
+
+  max-width: 650px;
+
+  font-size: clamp(40px, 5vw, 64px);
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+
+  font-weight: 750;
+
+  color: #0f172a;
+}
+
+
+/* highlighted title */
+
+.dashboard_highlighted_title {
+  display: block;
+
+  margin-top: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #4f46e5,
+    #7c3aed
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.dashboard_message > p {
+  max-width: 600px;
+
+  margin-top: 22px;
+  margin-bottom: 0;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: #64748b;
+}
+
+
+/* ================================
+   MEETING SECTION
+================================ */
+
+.meeting_section {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 34px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ================================
+   NEW MEETING BUTTON
+================================ */
+
+.meeting_section > button:first-child {
+  min-height: 50px;
+
+  padding: 0 22px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 20px rgba(37, 99, 235, 0.22);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.meeting_section > button:first-child:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.28);
+}
+
+
+.meeting_section > button:first-child:active {
+  transform: translateY(0);
+}
+
+
+/* button contents */
+
+.new_meeting_desc {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.new_meeting_desc svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* ================================
+   JOIN MEETING SECTION
+================================ */
+
+/* .join_meeting_section {
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 10px;
+
+  padding-left: 14px;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+} */
+ .join_meeting_section {
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+
+  padding-left: 14px;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* 
+.join_meeting_section:focus-within {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+} */
+
+.join_meeting_section:focus-within {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.join_meeting_section > svg {
+  flex-shrink: 0;
+
+  width: 19px;
+  height: 19px;
+
+  color: #64748b;
+}
+/* 
+.join_meeting_section > svg {
+  flex-shrink: 0;
+
+  width: 19px;
+  height: 19px;
+
+  color: #64748b;
+} */
+
+
+/* form */
+
+.join_meeting_section form {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+
+/* input */
+
+.join_meeting_section input {
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+
+  padding: 0 12px;
+
+  width: 180px;
+
+  /* min-height: 48px; */
+
+  /* padding: 0 12px; */
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #0f172a;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.join_meeting_section input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* Join button */
+
+.join_meeting_section > button {
+  min-height: 50px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-left: 1px solid #e5e7eb;
+
+  background: #f8fafc;
+
+  color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.join_meeting_section > button:hover:not(:disabled) {
+  background: #2563eb;
+
+  color: white;
+}
+
+
+.join_meeting_section > button:disabled {
+  color: #94a3b8;
+
+  background: #f8fafc;
+
+  cursor: not-allowed;
+}
+
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.dashboard_right_message_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+/* ================================
+   RIGHT CARD
+================================ */
+
+.dashboard_right_message_container {
+  width: 100%;
+  max-width: 420px;
+
+  padding: 32px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.08),
+    0 4px 10px rgba(15, 23, 42, 0.03);
+
+  backdrop-filter: blur(15px);
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   USER GREETING
+================================ */
+
+.username_in_right_Side {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #64748b;
+
+  font-weight: 500;
+}
+
+
+.user_name_show {
+  margin-left: 5px;
+
+  color: #0f172a;
+
+  font-weight: 700;
+}
+
+
+/* ================================
+   TIME
+================================ */
+
+.timing_section {
+  padding: 28px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+.timing_section h2 {
+  margin: 0;
+
+  font-size: 46px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+
+  color: #0f172a;
+}
+
+
+.timing_section p {
+  margin: 10px 0 0;
+
+  font-size: 14px;
+
+  color: #64748b;
+}
+
+
+/* ================================
+   EMAIL + PLAN
+================================ */
+
+.user_email_with_plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+.user_logged_in {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  margin: 0;
+
+  min-width: 0;
+
+  font-size: 12px;
+
+  color: #94a3b8;
+}
+
+
+.user_logged_in span {
+  max-width: 250px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* ================================
+   PREMIUM PLAN
+================================ */
+
+.premium_background_plan {
+  flex-shrink: 0;
+
+  padding: 6px 11px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed
+  );
+
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+}
+
+
+.user_plan {
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: capitalize;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* ================================
+   FREE PLAN
+================================ */
+
+.free_plan {
+  flex-shrink: 0;
+
+  padding: 6px 11px;
+
+  background: #f1f5f9;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 50px;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* ================================
+   MEETING STATS
+================================ */
+
+.user_meeting_details {
+  padding-top: 22px;
+}
+
+
+.meeting_detail_container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding: 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  color: #475569;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+.monthly_meeting {
+  color: #0f172a;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1050px) {
+
+  .dashboard_wrapper {
+    padding: 55px 30px;
+  }
+
+  .dashboard_content {
+    gap: 40px;
+
+    grid-template-columns: 1fr 0.8fr;
+  }
+
+  .dashboard_title {
+    font-size: 48px;
+  }
+
+  .dashboard_right_message_container {
+    padding: 28px;
+  }
+}
+
+
+/* ================================
+   SMALL TABLET
+================================ */
+
+@media (max-width: 850px) {
+
+  .dashboard_wrapper {
+    padding: 45px 25px;
+  }
+
+  .dashboard_content {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .dashboard_left_message_wrapper {
+    justify-content: center;
+  }
+
+  .dashboard_message {
+    text-align: center;
+  }
+
+  .dashboard_message > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .meeting_section {
+    justify-content: center;
+  }
+
+  .dashboard_right_message_wrapper {
+    justify-content: center;
+  }
+
+  .dashboard_right_message_container {
+    max-width: 550px;
+
+    text-align: left;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .dashboard_wrapper {
+    min-height: auto;
+
+    padding: 35px 18px;
+  }
+
+  .dashboard_content {
+    gap: 35px;
+  }
+
+  .dashboard_title {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .dashboard_message > p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .meeting_section {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .meeting_section > button:first-child {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .new_meeting_desc {
+    justify-content: center;
+  }
+
+  .join_meeting_section {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .join_meeting_section form {
+    flex: 1;
+  }
+
+  .join_meeting_section input {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .dashboard_right_message_container {
+    padding: 24px;
+  }
+
+  .timing_section h2 {
+    font-size: 40px;
+  }
+}
+
+
+/* ================================
+   VERY SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+
+  .dashboard_wrapper {
+    padding: 28px 14px;
+  }
+
+  .dashboard_title {
+    font-size: 32px;
+  }
+
+  .dashboard_security_message {
+    font-size: 10px;
+  }
+
+  .dashboard_right_message_container {
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+  .timing_section h2 {
+    font-size: 35px;
+  }
+
+  .user_email_with_plan {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}
