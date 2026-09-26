@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-      Footer
-    </div>
+    <footer className='footer_wrapper'>
+      <span className='footer_message'>@2026 VmeetUp, All rights reserved</span>
+    </footer>
   )
 }
 

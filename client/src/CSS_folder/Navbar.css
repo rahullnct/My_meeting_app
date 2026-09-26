@@ -1,0 +1,364 @@
+/* Navbar.css */
+
+/* ================================
+   NAVBAR WRAPPER
+================================ */
+
+.navbar_wrapper {
+  width: 100%;
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   LEFT SIDE
+   LOGO + NAVIGATION
+================================ */
+
+.nav_links_and_logo {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.nav_links_and_logo > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #111827;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* ================================
+   NAV LINKS CONTAINER
+================================ */
+
+.nav_links {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* ================================
+   INDIVIDUAL NAV LINK
+================================ */
+
+.nav_link {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  text-decoration: none;
+
+  color: #64748b;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  border-radius: 9px;
+
+  position: relative;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* ================================
+   NAV ICON
+================================ */
+
+.nav_link svg {
+  flex-shrink: 0;
+
+  transition:
+    transform 0.2s ease,
+    stroke 0.2s ease;
+}
+
+
+/* ================================
+   HOVER
+================================ */
+
+.nav_link:hover {
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  transform: translateY(-1px);
+}
+
+.nav_link:hover svg {
+  transform: scale(1.05);
+}
+
+
+/* ================================
+   ACTIVE NAV LINK
+================================ */
+
+.nav_link.active {
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  font-weight: 600;
+}
+
+
+/* bottom active indicator */
+
+.nav_link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+  bottom: -12px;
+
+  height: 3px;
+
+  border-radius: 10px 10px 0 0;
+
+  background: #2563eb;
+}
+
+
+/* ================================
+   USER DETAILS
+================================ */
+
+.user_details {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  flex-shrink: 0;
+}
+
+
+/* ================================
+   USER NAME
+================================ */
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #475569;
+
+  white-space: nowrap;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 950px) {
+
+  .navbar_wrapper {
+    padding: 0 24px;
+  }
+
+  .nav_links_and_logo {
+    gap: 25px;
+  }
+
+  .nav_link {
+    padding: 10px 12px;
+
+    font-size: 14px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .user-name {
+    font-size: 13px;
+  }
+}
+
+
+/* ================================
+   SMALL TABLET
+================================ */
+
+@media (max-width: 750px) {
+
+  .navbar_wrapper {
+    min-height: 65px;
+
+    padding: 0 18px;
+  }
+
+  .nav_links_and_logo {
+    gap: 18px;
+  }
+
+  .logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .nav_links {
+    gap: 3px;
+  }
+
+  .nav_link {
+    padding: 9px;
+
+    font-size: 0;
+
+    gap: 0;
+  }
+
+  .nav_link svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .nav_link.active::after {
+    left: 9px;
+    right: 9px;
+
+    bottom: -12px;
+  }
+
+  .user-name {
+    display: none;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 520px) {
+
+  .navbar_wrapper {
+    padding: 0 14px;
+
+    min-height: 62px;
+  }
+
+  .nav_links_and_logo {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 31px;
+    height: 31px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .nav_links {
+    gap: 2px;
+  }
+
+  .nav_link {
+    padding: 8px;
+  }
+
+  .nav_link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav_link.active::after {
+    bottom: -11px;
+  }
+
+  .user_details {
+    gap: 8px;
+  }
+}
+
+
+/* ================================
+   VERY SMALL MOBILE
+================================ */
+
+@media (max-width: 370px) {
+
+  .navbar_wrapper {
+    padding: 0 10px;
+  }
+
+  .nav_links_and_logo {
+    gap: 5px;
+  }
+
+  .nav_link {
+    padding: 7px;
+  }
+
+  .nav_link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .logo {
+    width: 28px;
+    height: 28px;
+  }
+}
